@@ -1,0 +1,38 @@
+# Python 3.6
+def print_message_in_box(word):
+  # Get user input and validate 
+  try:
+      word = str(word)
+  except:
+      print("Please enter a string")
+  
+  # Create variables for drawing the box
+  padding_horizontal = (len(word) + 2)* "-"
+  padding_spaces = (len(word) + 2) * " "  
+  
+  # Use string interpolation f'' 
+  print(f'+{padding_horizontal}+\n'\
+         f'|{padding_spaces}|\n' \
+         f'| {word} |\n' \
+         f'|{padding_spaces}|\n'\
+         f'+{padding_horizontal}+') 
+        
+# Ruby 2.6
+def print_message_in_box(word)
+  try:
+     word = word.to_s
+  except:
+     p 'Please enter a string'
+  end
+  
+  padding_horizontal = (word.size + 2) * "-"
+  padding_spaces = (word.size + 2) * " "
+  
+  # Use "" instead of '' for string interpolation as '' prints the literal
+  p "+#{padding_horizontal}+\n" \
+    "|#{padding_spaces}|\n" \
+    "| #{word} |\n" \
+    "|#{padding_spaces}|\n" \
+    "+#{padding_horizontal}+\n"
+end
+  
